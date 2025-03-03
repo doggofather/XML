@@ -11,6 +11,8 @@ window.onload = function () {
     
     digitButtons = document.querySelectorAll('[id ^= "btn_digit_"]')
 
+    resultButton = document.getElementById("btn_op_equal")
+
     function onDigitButtonClicked(digit) {
         if (!selectedOperation) {
             if ((digit != '.') || (digit == '.' && !a.includes(digit))) {
@@ -58,6 +60,10 @@ window.onload = function () {
         if (a === '') return
         selectedOperation = '+/-'
     }
+    document.getElementById("btn_op_sin").onclick = function () {
+        if (a === '') return
+        selectedOperation = 'sin'
+    }
 
     //                
     document.getElementById("btn_op_clear").onclick = function () {
@@ -68,9 +74,19 @@ window.onload = function () {
         outputElement.innerHTML = 0
     }
 
+    function setColorBasedOnResult(result) {
+    
+        const hue = 174; 
+        const saturation = 50; 
+        const originalLightness = 60; 
+
+        const newLightness = originalLightness * (1 - result);
+        resultButton.style.background = `hsl(${hue}, ${saturation}%, ${newLightness}%)`;
+         
+    }
                           
-    document.getElementById("btn_op_equal").onclick = function () {
-        if (a === '' || (selectedOperation !== '+/-' && selectedOperation !== '%' && b === '') || !selectedOperation) {
+    resultButton.onclick = function () {
+        if (a === '' || (selectedOperation !== 'sin' && selectedOperation !== '+/-' && selectedOperation !== '%' && b === '') || !selectedOperation) {
             return;
         }
     
@@ -93,6 +109,8 @@ window.onload = function () {
             case '%':
                 expressionResult = (+a) * 0.01;
                 break;
+            case 'sin':
+                expressionResult = Math.abs(Math.sin(+a));
         }
     
         a = expressionResult.toString();
@@ -100,5 +118,6 @@ window.onload = function () {
         selectedOperation = null;
     
         outputElement.innerHTML = a;
+        setColorBasedOnResult(expressionResult);
     }
 };
