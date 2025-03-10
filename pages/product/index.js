@@ -16,15 +16,15 @@ export class ProductPage {
         };
     
         const titles = {
-            1: "Save our Planet!",
-            2: "Multinational family",
-            3: "Our friends"
+            1: "Спасём нашу планету!",
+            2: "Мультинациональная семья",
+            3: "Наши друзья"
         };
 
         const texts = {
-            1: "Save forests. Save your future!",
-            2: "We have projects in many countires",
-            3: "Worldwide brands like Microsoft and Netflix sponsor us"
+            1: "Спасём деревья, спасём наше будущее!",
+            2: "Различные проекты в разных странах",
+            3: "Международные бренды, такие как Нетфликс и Майкрософт нас поддерживают"
         };
 
         return {

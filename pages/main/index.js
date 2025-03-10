@@ -36,20 +36,20 @@ export class MainPage {
             { 
                 id: 1, 
                 src:"https://standfortrees.org/wp-content/uploads/2020/03/SFT-Logo-Long-Color.png",
-                title: "Save the trees!",
-                text: "Learn more about global forest problems" 
+                title: "Спасём деревья!",
+                text: "Узнай о проблемах" 
             },
             { 
                 id: 2, 
                 src: "https://standfortrees.org/wp-content/uploads/Untitled-800-x-1200-px-800-x-200-px-800-x-400-px-2.png", 
-                title: "Our projects", 
-                text: "Our main projects" 
+                title: "Наши проекты", 
+                text: "Основные проекты" 
             },
             { 
                 id: 3, 
                 src: "https://standfortrees.org/wp-content/uploads/nordic-wirstbands-768x245.png", 
-                title: "Our partners", 
-                text: "Learn more about our partners" 
+                title: "Наши партнеры", 
+                text: "Узнай больше о наших партнерах" 
             }
         ];
     }
