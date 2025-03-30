@@ -1,0 +1,25 @@
+[
+    {
+        "id":1,
+        "src":"https://standfortrees.org/wp-content/uploads/2020/03/SFT-Logo-Long-Color.png",
+        "title":"Спасём деревья!",
+        "text":"Узнай о проблемах",
+        "cardTitle": "Спасём нашу планету!",
+        "cardText":"Спасём деревья, спасём наше будущее!"
+    },
+    {
+        "id":2,
+        "src":"https://standfortrees.org/wp-content/uploads/Untitled-800-x-1200-px-800-x-200-px-800-x-400-px-2.png",
+        "title":"Наши проекты",
+        "text":"Основные проекты",
+        "cardTitle": "Мультинациональная семья",
+        "cardText":"Наши друзья"
+    },
+    {
+        "id": 3,
+        "src": "https://standfortrees.org/wp-content/uploads/nordic-wirstbands-768x245.png",
+        "title": "Наши партнеры",
+        "text": "Узнай больше о наших партнерах",
+        "cardTitle": "Различные проекты в разных странах",
+        "cardText":"Международные бренды, такие как Нетфликс и Майкрософт нас поддерживают"
+}]
