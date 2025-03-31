@@ -80,7 +80,7 @@ class StockDAO {
         stocks[stockIndex] = updatedStock;
         StocksRepository.write(stocks);
         
-        return new this(updatedStock.id, updatedStock.src, updatedStock.title, updatedStock.text, updatedStock.text1, updatedStock.text2, updatedStock.text3, updatedStock.text4);
+        return new this(updatedStock.id, updatedStock.src, updatedStock.title, updatedStock.text, updatedStock.cardTitle, updatedStock.cardText);
     }
     toJSON() {
         return {
