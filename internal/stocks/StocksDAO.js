@@ -57,6 +57,28 @@ class StockDAO {
             return new this(id, src, title, text);
         });
     }
+    static update(id, stockData) {
+        this._validateId(id);
+        
+        const stocks = StocksRepository.read();
+        const stockIndex = stocks.findIndex(s => s.id === id);
+        
+        if (stockIndex === -1) {
+            throw new Error(`Stock with id ${id} not found`);
+        }
+        
+        // Обновляем только переданные поля
+        const updatedStock = {
+            ...stocks[stockIndex],
+            ...stockData,
+            id: id // Гарантируем, что id не изменится
+        };
+        
+        stocks[stockIndex] = updatedStock;
+        StocksRepository.write(stocks);
+        
+        return new this(updatedStock.id, updatedStock.src, updatedStock.title, updatedStock.text);
+    }
 
     toJSON() {
         return {
